@@ -4,10 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import CategorySelectionPage from './pages/CategorySelectionPage';
 import StudyPage from './pages/StudyPage';
-import QuizSelectionPage from './pages/QuizSelectionPage';
-import QuizMultipleChoice from './pages/QuizMultipleChoice';
-import QuizFillInTheBlank from './pages/QuizFillInTheBlank';
-import StatsPage from './pages/StatsPage';
+import RedoPage from './pages/RedoPage'; // Corrected import path for RedoPage
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -15,14 +12,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/study" element={<CategorySelectionPage mode="study" />} />
+        <Route path="/study-selection" element={<CategorySelectionPage />} />
         <Route path="/study/:category" element={<StudyPage />} />
-        <Route path="/quiz" element={<CategorySelectionPage mode="quiz" />} />
-        <Route path="/quiz/selection" element={<QuizSelectionPage />} />
-        <Route path="/quiz/multiple-choice/:category" element={<QuizMultipleChoice />} />
-        <Route path="/quiz/fill-in-the-blank/:category" element={<QuizFillInTheBlank />} />
-        <Route path="/stats" element={<StatsPage />} />
+        <Route path="/redo" element={<RedoPage />} />
+        {/* Add routes for Quiz and Stats pages later */}
       </Routes>
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
