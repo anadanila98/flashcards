@@ -1,0 +1,29 @@
+/node_modules
+/dist
+/.vite
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lernap-debug.log*
+
+# OS
+.DS_Store
+thumbs.db
+
+# Editor
+.idea
+.vscode
+*.swp
+*.swo
+
+# Build
+.env
+.env.local
+.env.*.local
+
+# Runtime
+*.tgz
