@@ -3,21 +3,19 @@ import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="home-page">
+    <div className="home-page-container">
       <h1>Welcome to Spanish Flashcards!</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/study">Study Mode</Link>
-          </li>
-          <li>
-            <Link to="/quiz">Quiz Mode</Link>
-          </li>
-          <li>
-            <Link to="/stats">Stats Page</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="home-buttons">
+        <Link to="/study-selection">
+          <button className="home-button">Start Study</button>
+        </Link>
+        <Link to="/quiz-selection">
+          <button className="home-button">Start Quiz</button>
+        </Link>
+        <Link to="/stats">
+          <button className="home-button">View Statistics</button>
+        </Link>
+      </div>
     </div>
   );
 };
